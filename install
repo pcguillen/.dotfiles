@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+echo $DOTFILES
+echo $STOW_FOLDERS
+pushd $DOTFILES
+for folder in (echo $STOW_FOLDERS | string split ',' | string trim);
+    echo "stow $folder";
+    stow -D $folder;
+    stow $folder;
+end
+popd
+

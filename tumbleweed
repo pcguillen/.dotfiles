@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+if [ -z $STOW_FOLDERS ];
+  set STOW_FOLDERS "bin,wezterm,fish,omf";
+end
+
+if [ -z $DOTFILES ];
+  set DOTFILES "$HOME/.dotfiles";
+end
+
+begin; set -lx STOW_FOLDERS $STOW_FOLDERS; set -x DOTFILES $DOTFILES; $DOTFILES/install; end;
