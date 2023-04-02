@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 if [ -z $STOW_FOLDERS ];
-  set STOW_FOLDERS "bin,wezterm,fish,omf";
+  set STOW_FOLDERS "bin,wezterm,fish,omf,hyprland";
 end
 
 if [ -z $DOTFILES ];
